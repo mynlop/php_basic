@@ -2,7 +2,7 @@
 
 namespace Vehicles;
 
-class VehicleBase{
+abstract class VehicleBase{
     // public $propietario;
     // protected, es igual de privada pero accesible desde subclases o clases hijas
     protected $propietario;
@@ -14,6 +14,7 @@ class VehicleBase{
     }
 
     public function move(){
+        echo $this-> startEngine() .'<br>';
         echo 'moving<br>';
     }
 
@@ -24,4 +25,6 @@ class VehicleBase{
     public function setPropietario($propietario){
         $this->propietario = $propietario;
     }
+
+    public abstract function startEngine();
 }
