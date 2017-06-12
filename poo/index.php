@@ -1,18 +1,14 @@
 <?php
 
-class Car{
+class Vehicle{
     // public $propietario;
-    private $propietario;
+    // protected, es igual de privada pero accesible desde subclases o clases hijas
+    protected $propietario;
 
     // constructor
     public function __construct($propietario){
         $this->propietario = $propietario;
         echo 'Constructor<br>';
-    }
-
-    // destruct
-    public function __destruct(){
-        echo 'Destruct<br>';
     }
 
     public function move(){
@@ -28,15 +24,31 @@ class Car{
     }
 }
 
+class Car extends Vehicle{
+    public function move(){
+        echo 'Car: moving<br>';
+    }
+}
+
+class Truck extends Vehicle{
+    private $type;
+
+    public function __construct($propietario, $type){
+        $this->type = $type;
+        $this->propietario = $propietario;
+    }
+
+    public function move(){
+        echo 'Truck: ' . $this->type . ' moving<br>';
+    }
+}
+
 echo 'Class car<br>';
-
 $car = new Car('Santiago');
-$car2 = new Car('Mynor');
 $car->move();
-
-// $car->setPropietario('Santiago');
-// $car2->setPropietario('Mynor');
-// $car->propietario = 'Alex';
-// echo 'Owner: ' . $car->propietario;
 echo 'Propietario: ' . $car->getPropietario() .'<br>'; 
-echo 'Propietario: ' . $car2->getPropietario();
+
+echo '<br>Class truck<br>';
+$truck = new Truck('Mynor', 'Pickup');
+$truck->move();
+echo 'Propietario: ' . $truck->getPropietario();
