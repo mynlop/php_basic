@@ -9,6 +9,10 @@ include 'vehicles/Truck.php';
 use Vehicles\Car;
 use Vehicles\Truck;
 
+// interface MyInterface(){
+//     public function method1();
+// }
+
 echo 'Class car<br>';
 $car = new Car('Santiago');
 $car->move();
@@ -22,4 +26,9 @@ $truck2 = new Truck('Mynor', 'Pickup');
 $truck2->move();
 
 // echo '<br> Total Trucks: ' . Truck::$count;
-echo '<br> Total Trucks: ' . Truck::getTotal();
+echo '<br> Total Trucks: ' . Truck::getTotal() . '<br>';
+
+$ser = serialize($car);
+$newCar = unserialize($ser);
+
+echo 'NewCar Owner: ' . $newCar->getPropietario();
