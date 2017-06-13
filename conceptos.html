@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conceptos</title>
+</head>
+<body>
+    <h1>Conceptos PHP</h1>
+    <h2>Programacion orientada a objetsos (POO o OOP)</h2>
+    <p>Este es un paradigma de programación que nos permite generar un código más modular y más reutilizable. <strong>Clases:</strong> Una plantilla de una entidad abstracta.
+    <strong>Instancias:</strong> Elementos concretos de esa clase.</p>
+    <hr>
+    <h2>Construct and Destruct</h2>
+    <p>Php nos permite hacer uso de dos métodos especiales, los cuales son construct and destruct.
+    <strong>Construct</strong> será llamado inmediatamente después de que nosotros creamos un nuevo objeto.
+    <strong>Destruct</strong>, por otro lado, será llamado en el momento en el que ya no exista ninguna referencia a nuestro objeto o en el momento en el que se termine nuestro script.</p>
+    <hr>
+    <h2>Herencia</h2>
+    <p>La herencia es un proceso que nos ayuda a reutilizar código. Por medio de la herencia podemos hacer que una clase obtenga los métodos de otra clase.
+    Pensemos que tenemos una clase “Padre” y unas clases que sean “hijas”que ser derivan de esa clase.
+    A estas nuevas clases las podemos modificar y adicionar cosas nuevas sin necesidad de cambiar la clase padre.</p>
+    <hr>
+    <h2>Namespaces</h2>
+    <p>Los namespaces son una forma en la que podemos encapsular clases o funciones dentro de nuestro código.
+    Dar nombres muy genéricos a nuestro código puede ser muy problemático. Esto, generalmente, sucede cuando importamos librerías de otras personas en las que ellos han declarado una función o una variable con el mismo nombre y en ese caso habría una redeclaración.
+    Con los namespaces podemos dividir el código y encapsularlo. Le asignamos un nombre de espacio a nuestro código para que cuando usemos el código de alguien más no existan conflictos.</p>
+    <hr>
+    <h2>Static</h2>
+    <p>Definir propiedades o métodos estáticos nos permiten crear métodos y propiedades que son accesibles sin la necesidad de instanciar una clase. Pero recuerden que estos métodos no serán únicos para cada instancia, es decir que si ustedes de alguna forma modifican la propiedad estática, esta será cambiada para todos los objetos.</p>
+    <hr>
+    <h2>Abstract</h2>
+    <p>Una clase abstracta es como una clase parcialmente construida. El tipo de clases definidas como abstractas, 
+    si una clase contiene al menos un método abstracto debe ser definida como una clase abstracta.</p>
+    <hr>
+    <h2>Interface</h2>
+    <p>Las interfaces nos permiten definir qué métodos debe implementar ciertas clases sin necesidad de decir cómo deben ser implementados.
+    Se pueden utilizar las interfaces pensando en una especia de contrato, y no en una herencia.
+    Las interfaces se definen de la misma forma que una clase, pero no usando la palabra reservada class, en este caso utilizamos la palabra reservada interface. Cuando queramos utilizar la interfaz debemos usar la palabra reservada implement en lugar de la palabra extend.</p>
+    <hr>
+    <h2>Excepciones</h2>
+    <p>Muchas veces nos podemos encontrar con una nueva forma de enfrentar errores. Esto se conoce como excepciones.
+    Cuando comprendemos cómo funcionan las excepciones, podremos saber cómo reaccionar a diferentes tipos de errores.</p>
+    <hr>
+    <h2>Traits</h2>
+    <p>Muchos lenguajes de programación orientada a objetos utilizan un modelo de herencia. En el que usen una funcionalidad llamada trait que nos permite agregar o extender la funcionalidad de una clase sin tener la limitante de la herencia.
+    Agrupan funcionalidades específicas, se puede considerar que estos son clases especiales que no pueden ser especialmente llamados, estos no pueden ser instanciados de ninguna forma.</p>
+</body>
+</html>
