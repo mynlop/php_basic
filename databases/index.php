@@ -1,16 +1,3 @@
-<?php
-$dbHost = 'localhost';
-$dbName = 'cursoPHP';
-$dbUser = 'root';
-$dbPass = ''; 
-    try{
-        $pdo =  new PDO("mysql:host=$dbHost; dbname=$dbName", $dbUser, $dbPass);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch(Exception $e){
-        echo $e->getMessage();
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +12,7 @@ $dbPass = '';
         <h1>Databases</h1>
         <ul>
             <li><a href="">List Users</a></li>
-            <li><a href="">Add Users</a></li>
-            <li><a href=""></a></li>
+            <li><a href="add.php">Add Users</a></li>
         </ul>
     </div>
 </body>
